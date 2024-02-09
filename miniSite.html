@@ -6,20 +6,21 @@
         <meta name="viewport" content="">
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="miniSite.css">
+        <link rel="stylesheet" href="parts/parts.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <h1 class="headerTitle">Bestioles</h1>
-            <a href="?">Page 1</a>
-            <a href="?">Page 2</a>
-            <a href="?">Page 3</a>
-            <a href="?">Page 4</a>
-            <img  class="headerImg" src="https://lenperaltastore.com/cdn/shop/products/payit5_1024x1024.jpg?v=1555607515" alt="machin">
-        </header>
+        <div id="header-placeholder"></div>
+        <script>
+            $(function(){
+                $('#header-placeholder').load('parts/header.html');
+            });
+        </script>
+
         <div class="center">
             <section class="section section1">
                 <h2>Section 1 at the ready ! \o/</h2>
@@ -31,7 +32,12 @@
                 <h2>Section 3 getting at the bottom of things ! >:D </h2>
             </section>
         </div>
-        <footer>
-        </footer>
+
+        <div id="footer-placeholder"></div>
+        <script id="footer-placeholder">
+            $(function(){
+                $('#footer-placeholder').load('parts/footer.html');
+            });
+        </script>
     </body>
 </html>
